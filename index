@@ -4,9 +4,9 @@ const url='https://api.covidtracking.com/v1/us/daily.json'
 
 export const fetchData=async () =>{
     try {
-        const {data : {positive,negative,death,lastModified} }=await axios.get(url);
+     const {data : {confirmed,recovered,deaths,}}=await axios.get(url);
         
-        return {positive,negative,death,lastModified, };
+        return {confirmed,recovered,deaths,};
 
     } catch (error) {
         
