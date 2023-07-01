@@ -3,8 +3,13 @@ import React from "react";
 import { Card, CardContent,Typography,Grid } from '@material-ui/core';
 import styles from './cards.module.css';
 
-const Cards = (props) => {
-    console.log(props)
+const Cards = ( {data: {confirmed,recovered,tested} }) => {
+    console.log(confirmed)
+
+    if(!confirmed){
+       return 'loading.....'
+    }
+
 
 
     return (
